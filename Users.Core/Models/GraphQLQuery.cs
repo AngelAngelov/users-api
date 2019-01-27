@@ -1,6 +1,6 @@
 ﻿using Newtonsoft.Json.Linq;
 
-namespace Users.Api.Models
+namespace Users.Core.Models
 {
     public class GraphQLQuery
     {

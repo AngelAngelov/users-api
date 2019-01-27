@@ -1,7 +1,7 @@
 ﻿using Microsoft.AspNetCore;
 using Microsoft.AspNetCore.Hosting;
 
-namespace NHLStats.Api
+namespace Users.Api
 {
     public class Program
     {

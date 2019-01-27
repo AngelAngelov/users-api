@@ -10,7 +10,7 @@ using Users.Core.Interfaces;
 using Users.Data;
 using Users.Data.Repositories;
 
-namespace NHLStats.Api
+namespace Users.Api
 {
     public class Startup
     {
@@ -33,7 +33,7 @@ namespace NHLStats.Api
             }));
 
             services.AddMvc();
-            services.AddDbContext<UsersContext>();
+            services.AddDbContext<UsersContext>(o => o.UseSqlite(Configuration.GetConnectionString("SQLite")));
 
             //Add dependencies
             services.AddTransient<IUserRepository, UserRepository>();

@@ -10,11 +10,6 @@ namespace Users.Data
         {
         }
 
-        protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
-        {
-            optionsBuilder.UseSqlite("Data Source=blogging.db");
-        }
-
         public DbSet<User> Users { get; set; }        
     }
 }

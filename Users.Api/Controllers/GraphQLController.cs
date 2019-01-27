@@ -5,6 +5,7 @@ using GraphQL.Types;
 using Microsoft.AspNetCore.Cors;
 using Microsoft.AspNetCore.Mvc;
 using Users.Api.Models;
+using Users.Core.Models;
 
 namespace Users.Api.Controllers
 {

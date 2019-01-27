@@ -12,20 +12,20 @@ namespace Users.Data
             //if it does not it is created
             db.Database.EnsureCreated();
 
-            //put some sample data if table Users is empty
-            if (!db.Users.Any())
-            {
-                db.Users.Add(new User()
-                {
-                    Id = Guid.NewGuid(),
-                    GivvenName = "John",
-                    FamilyName = "Doe",
-                    Email = "jonny_doe@gmail.com",
-                    Created = DateTime.Now
-                });
+            //uncomment this to put some sample data if table Users is empty
+            //if (!db.Users.Any())
+            //{
+            //    db.Users.Add(new User()
+            //    {
+            //        Id = Guid.NewGuid(),
+            //        GivvenName = "John",
+            //        FamilyName = "Doe",
+            //        Email = "jonny_doe@gmail.com",
+            //        Created = DateTime.Now
+            //    });
 
-                db.SaveChanges();
-            }
+            //    db.SaveChanges();
+            //}
         }
     }
 }
