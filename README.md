@@ -22,7 +22,7 @@ Application is uploaded live at Microsoft Azure
 
 URL: https://users-testapp.azurewebsites.net/
 
-### project setup 
+## Project setup 
  
  Clone the repo 
  
@@ -54,77 +54,90 @@ URL: https://users-testapp.azurewebsites.net/
  http://localhost:5000
  ```
  
- ### end points 
+ ## End points 
  
  The application is split on 2 parts: 
-  - #### Public end point #####
+  1. #### Public end point #####
   
-  Route: /graphql
+   **Route:** /graphql
   
-  Usage: This is a graphql end point for retrieving queries with public data. The data suppose to be public and the application allows CORS without any restrictions (just for sample). Two queries can be performed: 
+   **Usage:** This is a graphql end point for retrieving queries with public data. The data suppose to be public and the application allows CORS without any restrictions (just for sample). Two queries can be performed: 
   
-   - GET ALL USERS
-  ```
-  {
-    users {
-      id, 
-      email, 
-      givvenName, 
-      familyName
+   **GET ALL USERS**
+   
+    ```
+    {
+      users {
+        id, 
+        email, 
+        givvenName, 
+        familyName
+      }
     }
-  }
-  ```
+    ```
   
-   - GET USER BY ID
-  ```
-  {
-    user(id: "00000000-0000-0000-0000-000000000000") {
-      email, 
-      givvenName, 
-      familyName
+   **GET USER BY ID**
+   
+   ```
+    {
+      user(id: "00000000-0000-0000-0000-000000000000") {
+        email, 
+        givvenName, 
+        familyName
+      }
     }
-  }
-  ```
+   ```
   
-  - #### Not-public endpoints ####
+  2. #### Not-public endpoints ####
   
-    - **Route:** /api/user/{id}
+     - **Route:** /api/user/{id}
 
-      **Type:** GET
+       **Type:** GET
 
-      **Data type:** json
+       **Data type:** json
 
-      **Description:** Get speciffic user by id.
+       **Description:** Get speciffic user by id.
         
-    - **Route:** /api/user/all
+     - **Route:** /api/user/all
 
-      **Type:** GET
+       **Type:** GET
 
-      **Data type:** json
+       **Data type:** json
 
-      **Description:** Get all users
+       **Description:** Get all users
         
-    - **Route:** /api/user/
+     - **Route:** /api/user/
 
-      **Type:** POST
+       **Type:** POST
 
-      **Data type:** json
+       **Data type:** json
 
-      **Description:** Create new user. Required fields email, givvenName, familyName
+       **Description:** Create new user. Required fields email, givvenName, familyName
         
-    - **Route:** /api/user/
+     - **Route:** /api/user/
 
-      **Type:** PUT
+       **Type:** PUT
 
-      **Data type:** json
+       **Data type:** json
 
-      **Description:** Edit user. Required fields id, email, givvenName, familyName
+       **Description:** Edit user. Required fields id, email, givvenName, familyName
         
-    - **Route:** /api/user/{id}
+     - **Route:** /api/user/{id}
 
-      **Type:** DELETE
+       **Type:** DELETE
 
-      **Data type:** json
+       **Data type:** json
 
-      **Description:** Remove speciffic user by id.
-  
+       **Description:** Remove speciffic user by id.
+      
+   ## Integration tests
+   
+   To run the integration tests you have to go to test project directory /Users.Api.IntegrationTest
+   
+   Run: 
+   
+   ```
+   dotnet test
+   ```
+   
+   Tests' results sould be displayed in the console.
