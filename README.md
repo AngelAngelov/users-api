@@ -2,6 +2,10 @@
 
 Simple API that exposes functionality to create, read, update and delete (CRUD) users.
 
+Application does not have graphic interface just rest api.
+
+SQLite is used as a database. 
+
 User model: 
 
  - **id** - a unique user id
@@ -54,6 +58,16 @@ URL: https://users-testapp.azurewebsites.net/
  http://localhost:5000
  ```
  
+ The api can be called via Postman or cURL.
+ 
+ UI for manual testing GrapQL queries can be found at http://localhost:5000/qraphql.
+ 
+ GraphQL endpoint allows CORS. Web Api endpoints do not allow CORS.
+ 
+ Live demo of the project can be found at https://users-testapp.azurewebsites.net
+ 
+ GraphQl interface can be found at https://users-testapp.azurewebsites.net/graphql.
+ 
  ## End points 
  
  The application is split on 2 parts: 
@@ -65,16 +79,16 @@ URL: https://users-testapp.azurewebsites.net/
   
    **GET ALL USERS**
    
-    ```
-    {
-      users {
-        id, 
-        email, 
-        givvenName, 
-        familyName
-      }
-    }
-    ```
+   ```
+   {
+     users {
+       id, 
+       email, 
+       givvenName, 
+       familyName
+     }
+   }
+   ```
   
    **GET USER BY ID**
    
